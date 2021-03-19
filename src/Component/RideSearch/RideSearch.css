@@ -1,0 +1,37 @@
+.vehicle img{
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.searchForm {
+    background-color: lightgray;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.searchForm input{
+    display: block;
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 5px;
+    width: 250px;
+    margin-bottom: 5px;
+}
+.rideLocation{
+    background-color:rgb(252, 82, 52);
+    color: white;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.rideLocation h1{
+    font-size: 26px;
+}
+
+.error{
+    color: red;
+}

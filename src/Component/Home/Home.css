@@ -1,0 +1,11 @@
+.homeBackground{
+    background-image: url('https://i.ibb.co/ftxGjd0/Bg.png');
+    height: 675px;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.displayImage{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+}
