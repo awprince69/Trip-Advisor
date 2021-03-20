@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 import './RideType.css'
 
 const RideType = (props) => {
-    const { id, name, pic1 } = props.vehicle;
+    const {name, pic1 } = props.vehicle;
     const history = useHistory();
     const handleClick=()=>{
         history.push(`/search/${name}`)

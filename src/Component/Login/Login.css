@@ -1,0 +1,31 @@
+.logInForm{
+    margin: 30px 100px;
+}
+
+.logInForm input{
+    display: block;
+    margin-top: 30px;
+    padding: 5px;
+    border: 1px solid rebeccapurple;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.error{
+    color: red;
+}
+.formContainer{
+    margin: 0px 520px;
+    border: 1px solid purple;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.buttonDesign button{
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: 8px 680px;
+    color:rgb(11, 8, 194);
+}
