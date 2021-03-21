@@ -21,7 +21,7 @@ const Header = () => {
                         {
                             !loggedIn.email && <Link to="/login"><button type="button" className="btn btn-success mt-1">Login</button></Link>
                         }
-                        <Link className="nav-link active" style={{ fontWeight: "800", color: "" }} to="#">{loggedIn.email}</Link>
+                        <Link className="nav-link active" style={{ fontWeight: "800", color: "" }} to="#">{loggedIn.email || loggedIn.displayName}</Link>
                     </div>
                 </div>
             </div>

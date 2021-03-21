@@ -29,7 +29,9 @@ const Login = () => {
             .then(res => {
                 setUser(res)
                 setLoggedIn(res);
-                history.replace(from);
+                if (!res.error) {
+                    history.replace(from);
+                }
             })
     }
     const facebookSignIn = () => {
@@ -37,7 +39,9 @@ const Login = () => {
             .then(res => {
                 setUser(res)
                 setLoggedIn(res);
-                history.replace(from);
+                if (!res.error) {
+                    history.replace(from);
+                }
             })
     }
     const onSubmit = (data) => {
@@ -46,7 +50,9 @@ const Login = () => {
                 .then(res => {
                     setUser(res);
                     setLoggedIn(res);
-                    history.replace(from);
+                    if (!res.error) {
+                        history.replace(from);
+                    }
                 })
         }
         if (!newUser && data.email && data.password) {
@@ -54,7 +60,10 @@ const Login = () => {
                 .then(res => {
                     setUser(res)
                     setLoggedIn(res)
-                    history.replace(from);
+                    if (!res.error) {
+                        history.replace(from);
+                    }
+
 
                 })
         }

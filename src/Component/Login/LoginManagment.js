@@ -37,7 +37,6 @@ export const handleFacebook = () => {
         .catch((error) => {
             const newUserInfo = {};
             newUserInfo.error = error.message;
-            // console.log(error.message);
             return newUserInfo;
         });
 }
