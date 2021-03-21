@@ -1,10 +1,23 @@
 .rideTypeContainer{
-    padding-top:200px ;
+    padding-top:160px ;
     text-align: center;
     padding-left: 50px;
+    opacity: .9;
+    margin-top: 150px;
 }
 .rideTypeContainer img{
     height: 200px;
     width: 100%;
     padding: 30px;
+    background-color: #b7cfe6;
+}
+
+@media  (max-width: 688px){
+    .rideTypeContainer{
+        padding-top: 0px;
+        text-align: center;
+        padding-left: 0px;
+        opacity: .9;
+        margin-top: 0px;
+    }
 }

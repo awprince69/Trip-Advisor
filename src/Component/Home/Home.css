@@ -1,11 +1,27 @@
 .homeBackground{
-    background-image: url('https://i.ibb.co/ftxGjd0/Bg.png');
-    height: 675px;
+    /* background-image: url('https://i.ibb.co/ftxGjd0/Bg.png'); */
+    background-image: url('https://i.ibb.co/pfntnVG/background.png');
+    height: 670px;
     background-position: center center;
     background-size: 100% 100%;
+    background-color:lightgray;
 }
 
 .displayImage{
     display:grid;
     grid-template-columns: repeat(4,1fr);
+}
+
+@media  (max-width: 688px){
+    .homeBackground{
+        width: 100%;
+        height:0px;
+        background-position: center center;
+        background-size: 100% 100%;
+        background-color:lightgray;
+    }
+    .displayImage{
+        grid-template-columns: repeat(1,1fr);
+        padding-top: 490px;
+    }
 }

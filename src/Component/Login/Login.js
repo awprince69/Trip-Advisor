@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { createUserWithEmailAndPassword, handleGoogle, initializeApp, signInWithEmailAndPassword } from './LoginManagment';
+import { createUserWithEmailAndPassword, handleGoogle, initializeApp, signInWithEmailAndPassword, handleFacebook } from './LoginManagment';
 import { useRef } from 'react';
 import { useHistory, useLocation } from 'react-router';
 
@@ -15,8 +15,7 @@ const Login = () => {
     const [newUser, setNewUser] = useState(false)
     const [user, setUser] = useState({
         error: '',
-        name: '',
-        success: false
+        name: ''
     });
     const { register, handleSubmit, watch, errors } = useForm();
     const [loggedIn, setLoggedIn] = useContext(UserContext)
@@ -33,21 +32,30 @@ const Login = () => {
                 history.replace(from);
             })
     }
-    const onSubmit = data => {
+    const facebookSignIn = () => {
+        handleFacebook()
+            .then(res => {
+                setUser(res)
+                setLoggedIn(res);
+                history.replace(from);
+            })
+    }
+    const onSubmit = (data) => {
         if (newUser === true) {
-            createUserWithEmailAndPassword(data.name,data.email, data.password)
+            createUserWithEmailAndPassword(data.name, data.email, data.password)
                 .then(res => {
                     setUser(res);
                     setLoggedIn(res);
                     history.replace(from);
                 })
         }
-        if (newUser === false) {
+        if (!newUser && data.email && data.password) {
             signInWithEmailAndPassword(data.email, data.password)
                 .then(res => {
                     setUser(res)
                     setLoggedIn(res)
                     history.replace(from);
+
                 })
         }
     };
@@ -107,8 +115,8 @@ const Login = () => {
             <p style={{ color: 'red', margin: '0px 550px' }}>{user.error}</p>
             <div className="buttonDesign">
                 <h5 style={{ textAlign: 'center' }}>OR</h5>
-                <button className="btn " onClick={googleSignIn}><FontAwesomeIcon icon={faGoogle} /> Google</button>
-                <button className="btn"><FontAwesomeIcon icon={faFacebook} /> facebook</button>
+                <button className="btn" onClick={googleSignIn}><FontAwesomeIcon icon={faGoogle} /> Google</button>
+                <button className="btn" onClick={facebookSignIn}><FontAwesomeIcon icon={faFacebook} /> facebook</button>
             </div>
         </div>
     );

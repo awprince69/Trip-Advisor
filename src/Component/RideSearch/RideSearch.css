@@ -3,7 +3,9 @@
     margin-left: 10px;
     margin-top: 10px;
 }
-
+.destination{
+    display: flex;
+}
 .searchForm {
     background-color: lightgray;
     padding: 20px;
@@ -34,4 +36,38 @@
 
 .error{
     color: red;
+}
+.map{
+    width: 800px;
+    height: 500px;
+    margin-left:150px;
+    margin-top:14px;
+}
+
+@media (max-width: 688px){
+    .destination{
+        display: inline-block;
+    }
+    .map{
+        width: 10px;
+        height: 10px;
+        margin-left:0px;
+        margin-top:14px;
+    }
+    .searchForm {
+        background-color: lightgray;
+        width: 110%;
+        padding: 0px;
+        margin-top: 15px;
+        border-radius: 10px;
+        padding-bottom: 5px;
+    }
+    .rideLocation{
+        background-color:rgb(252, 82, 52);
+        color: white;
+        border-radius: 10px;
+        padding-left: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
 }
