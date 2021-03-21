@@ -1,6 +1,6 @@
 # Trip-Advisor
 
-LiveSite [Create React App](https://github.com/facebook/create-react-app).
+[LiveSite](https://github.com/facebook/create-react-app).
 
 ## Website Feature
 * Different ride option
